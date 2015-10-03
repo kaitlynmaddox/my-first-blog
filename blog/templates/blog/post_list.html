@@ -3,7 +3,26 @@
 		<title>Kaitlyn's Blog</title>
 	</head>
 	<body>
-		<p>Hi there!</p>
-		<p>It works!</p>
+		<div><h1>Kaitlyn's First Blog</h1></div>
+
+	{% for post in posts %}
+		<div>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+	{% endfor %}
+
+		<div>
+			<h3>First Paragraph</h3>
+			<p>This is the first paragraph of the blog. This is another sentence. This is also another sentence.</p>
+		</div>
+
+		<div>
+			<h3>Second Paragraph</h3>
+			<p>This is the second paragraph of the blog. This is another sentence. This is also another sentence.</p>
+		</div>
+
+		{{posts}}
 	</body>
 </html>
